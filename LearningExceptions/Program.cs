@@ -6,7 +6,15 @@ namespace LearningExceptions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                throw new Exception("Custom Message");
+            }
+            catch (Exception ex)
+
+            {
+                Console.WriteLine(ex);
+            }
         }
     }
 }
