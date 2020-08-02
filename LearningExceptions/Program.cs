@@ -3,13 +3,21 @@
 namespace LearningExceptions
 {
     class Person
+        //used snippet to create manually implemented property
     {
-        private int myVar;
+        private String name;
 
-        public int MyProperty
+        public String Name
         {
-            get { return myVar; }
-            set { myVar = value; }
+            get { return name; }
+            set
+            {
+            if (value == null)
+                
+                    throw new NullReferenceException("name must have a value");
+                    name = value;
+ 
+            }
         }
     }
 
@@ -19,13 +27,11 @@ namespace LearningExceptions
         {
             try
             {
-                throw new Exception("Custom Message");
+                var person = new Person();
+                //person.Name is from class Person and Name is for get/set
+                person.Name = null;
             }
-            catch (Exception ex)
-
-            {
-                Console.WriteLine(ex);
-            }
+            
         }
     }
 }
