@@ -31,6 +31,9 @@ namespace LearningExceptions
                 //person.Name is from class Person and Name is for get/set
                 person.Name = null;
             }
+            //if you remove catch and run finally
+            //db resource still disconnects and runs
+            //finally message; app crashes
             catch (Exception)
             {
                 Console.WriteLine("Exception Caught");
