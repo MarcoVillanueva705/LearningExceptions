@@ -31,6 +31,14 @@ namespace LearningExceptions
                 //person.Name is from class Person and Name is for get/set
                 person.Name = null;
             }
+            catch (Exception)
+            {
+                Console.WriteLine("Exception Caught");
+            }
+            finally
+            {
+                Console.WriteLine("Disconnecting Database...You Have My Sympathies...");
+            }
             
         }
     }
