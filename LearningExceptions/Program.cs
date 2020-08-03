@@ -35,6 +35,9 @@ namespace LearningExceptions
             {
                 Console.WriteLine("Exception Caught");
             }
+            //will run whether anything was 'tried' or 'caught'
+            //good for opening and closing resources
+            //such as db connections
             finally
             {
                 Console.WriteLine("Disconnecting Database...You Have My Sympathies...");
